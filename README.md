@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# AcadeMe
+Projeto desenvolvido como Trabalho de Conclusão de Curso em Análise e Desenvolvimento de Sistemas. Trata-se de uma plataforma para compartilhamento de portifólio acadêmico com upload de arquivos
+>>>>>>> 0c2ad031735b7870c30969ab3e5976ebda4c6981
