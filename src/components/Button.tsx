@@ -19,10 +19,18 @@ const iconMap = {
 };
 
 const buttonVariants = cva(
-  "h-42 px-4 py-2 flex items-center rounded-3xl bg-[#006ACB] text-[#F0F2F5] hover:opacity-85",
+  "h-42 px-4 py-2 flex items-center bg-[#006ACB] text-[#F0F2F5] hover:opacity-85",
   {
     variants: {
-      variant: {
+      shape: {
+        pill: "rounded-full",
+        round: "rounded-lg",
+        soft: "rounded",
+        square: "rounded-none",
+        halfleft:"rounded-l-full",
+        halfright:"rounded-r-full"
+      },
+      buttonStyle: {
         default: "bg-[#006ACB] text-[#F0F2F5]",
         light: "bg-[#2C9AFF] text-[#F0F2F5]",
         dark: "bg-[#003465] text-[#F0F2F5]",
@@ -36,7 +44,8 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: 'default',
+      shape: 'pill',
+      buttonStyle: 'default',
       size: 'default',
     }
   }
@@ -44,19 +53,20 @@ const buttonVariants = cva(
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
   iconLeft?: keyof typeof iconMap; // Permite passar o nome do ícone à esquerda
+  iconCenter?: keyof typeof iconMap; // Permite passar o nome do ícone ao centro
   iconRight?: keyof typeof iconMap; // Permite passar o nome do ícone à direita
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, size, variant, iconLeft, iconRight, children, ...props }, ref) => {
+  ({ className, size, shape, iconLeft, iconCenter, iconRight, children, ...props }, ref) => {
     return (
       <button
         ref={ref}
-        className={cn(buttonVariants({ variant, size, className }))} 
+        className={cn(buttonVariants({ shape, size, className }))} 
         {...props}
       >
         {iconLeft && <span className="mr-2">{iconMap[iconLeft]({})}</span>} {/* Adiciona ícone à esquerda */}
-        {children}
+        {children || (iconCenter && <span>{iconMap[iconCenter]({})}</span>)} {/* Adiciona conteúdo dentro do botão ou ícone ao centro */}
         {iconRight && <span className="ml-2">{iconMap[iconRight]({})}</span>} {/* Adiciona ícone à direita */}
       </button>
     );

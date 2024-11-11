@@ -21,8 +21,9 @@ const textAreaVariants = cva(
         blue: "focus:border-[#006ACB]",
         dark_blue: "focus:border-[#003465]",
         light_blue: "focus:border-[#2C9AFF]",
+        disabled: "border-none"
       },
-      phColour: {
+      phColor: {
         black: "placeholder:text-black",
         white: "placeholder:text-[#F0F2F5]",
         gray: "placeholder:text-[#565656]",
@@ -87,12 +88,13 @@ interface TextAreaProps extends
   TextareaHTMLAttributes<HTMLTextAreaElement>,
   VariantProps<typeof textAreaVariants>,
   VariantProps<typeof labelVariants> {
-  label?: string;
+    label?: string;
+    readOnly?: boolean;
 }
 
 // Criando o componente TextArea
 const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
-  ({ className, background, borderColor, phColour, textSize, textColor, labelSize, labelColor, label, ...props }, ref) => {
+  ({ className, readOnly, background, borderColor, phColor, textSize, textColor, labelSize, labelColor, label, ...props }, ref) => {
     // Estado para gerenciar o foco no textarea
     const [isFocused, setIsFocused] = useState(false);
 
@@ -101,10 +103,8 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         {label && <label className={cn(labelVariants({ labelSize, labelColor }))}>{label}</label>}
         <textarea
           ref={ref}
-          className={cn(
-            "", // Estilo modificado: somente a borda inferior
-            textAreaVariants({ background, borderColor, phColour, textSize, textColor, className }),
-          )}
+          className={cn(textAreaVariants({ background, borderColor: readOnly? "disabled" : borderColor, phColor, textSize, textColor, className }))}
+          readOnly={readOnly}
           {...props}
         />
       </div>

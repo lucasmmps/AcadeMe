@@ -10,7 +10,7 @@ function App() {
   
   return (
     <div className="App">
-      <Button ref={ref} size='default' variant='default' iconRight='add' >Novo</Button>
+      <Button ref={ref} size='default' shape='pill' iconRight='add' >Novo</Button>
       <TextBar variant="default" textSize="lg" label="Blockchain" placeholder="Digite algo..." iconLeft="search" hideIconsOnInput />
       <TextBar variant="default" textSize="sm" className="extra-class" />
       
