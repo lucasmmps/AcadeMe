@@ -37,7 +37,7 @@ const inputVariants = cva(
       },
       textColor: {
         black: "text-black",
-        white: "text-[F0F2F5]",
+        white: "text-[#F0F2F5]",
         gray: "text-[#565656]",
         light_gray: "text-[#94A2B7]",
         blue: "text-[#006ACB]",
