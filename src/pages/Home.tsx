@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Button, buttonVariants } from '../components/Button';
+import { Button } from '../components/Button';
 import { TextBar } from '../components/TextBar';
 import logo from '../assets/white-logo.svg'
 import classroomMoldure from '../assets/classroom-moldure.svg';
@@ -49,7 +49,7 @@ function Home() {
                     <img src={classroomMoldure} alt="classroom" />
                     <div className="search-content-body flex flex-col items-center mt-24 mr-32">
                         <h1 className='search-title text-[#006ACB] text-[40px] mb-[44px]'>O que é o AcadeMe?</h1>
-                        <p className='about text-[#006ACB] text-[26px] mb-[44px]'>
+                        <p className='about-search text-[#006ACB] text-[26px] mb-[44px]'>
                         Com o AcadeMe o aluno é capaz de destacar toda a
                         sua trajetória acadêmica trazendo vizibilidade para
                         todas atividades feitas na faculdade e credibilidade
@@ -73,7 +73,7 @@ function Home() {
                 <div className="share-content flex gap-56">
                     <div className="search-content-body flex flex-col items-start mt-24 ml-16">
                         <h1 className='search-title text-[#F0F2F5] text-[40px] text-justify mb-[44px]'>Compartilhe</h1>
-                        <p className='about text-[#F0F2F5] text-[26px] text-start mb-[44px]'>
+                        <p className='about-share text-[#F0F2F5] text-[26px] text-start mb-[44px]'>
                         Você pode compartilhar seu portfólio com
                         colegas, professores e possíveis recrutadores,
                         destacando suas habilidades e conquistas acadêmicas.
