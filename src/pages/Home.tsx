@@ -16,10 +16,10 @@ function Home() {
         {/** top section **/}
         <section id="top-section">
             <div className="top-container">
-                <h1 className='title text-[#F0F2F5] text-[28px] font-bold pt- pb-2 pr-4 pl-4 text-left w-full'>AcedeMe Inc.</h1>
+                <h1 className='title text-[#F0F2F5] text-[28px] font-bold pt- pb-2 pr-4 pl-4 text-left w-full'>AcadeMe Inc.</h1>
                 <div className="top-content flex flex-col items-center justify-center">
                     <img src={logo} alt="logo" />
-                    <h1 className='slogan text-[#F0F2F5] text-[50px] mb-[21px]'>Seja bem-vindo ao seu<br/>futuro acadêmico</h1>
+                    <h1 className='slogan text-[#f4f0f5] text-[50px] mb-[21px]'>Seja bem-vindo ao seu<br/>futuro acadêmico</h1>
                     <div className="top-buttons-container flex items-center gap-[24px]">
                         <Button 
                             ref={ref}
