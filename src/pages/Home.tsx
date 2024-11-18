@@ -5,10 +5,24 @@ import logo from '../assets/white-logo.svg'
 import classroomMoldure from '../assets/classroom-moldure.svg';
 import studentsMoldure from '../assets/happy-students.svg';
 import './Home.css';
+import { useNavigate } from 'react-router-dom';
 
-function Home() {
+const Home: React.FC = () => {
+    const ref = useRef<HTMLButtonElement | null>(null);
+    const navigate = useNavigate();
+  
+    const handleGoToLogin = () => {
+      navigate('/Login');
+    };
+  
+    const handleGoToSignUp = () => {
+      navigate('/SignUp'); 
+    };
 
-  const ref = useRef <null | HTMLButtonElement> (null)
+
+//function Home() {
+
+  //const ref = useRef <null | HTMLButtonElement> (null)
   
   return (
     <div className="Home">
@@ -25,8 +39,9 @@ function Home() {
                             ref={ref}
                             size='default'
                             shape='pill'
-                            className='min-w-[171px] px-8 py-2 flex items-center justify-center'>
-                                Cadastre-se
+                            className='min-w-[171px] px-8 py-2 flex items-center justify-center'                                                      
+                            onClick={handleGoToSignUp} // Redirecionamento para a tela do cadastro
+                            > Cadastre-se
                         </Button>
 
                         <Button
@@ -34,6 +49,7 @@ function Home() {
                             size='default'
                             shape='pill'
                             className='min-w-[171px] px-8 py-2 flex items-center justify-center'
+                            onClick={handleGoToLogin} // Redirecionamento para a tela de login
                         >
                                 Login
                         </Button>
@@ -87,5 +103,8 @@ function Home() {
     </div>
   );
 }
+
+
+
 
 export default Home;
