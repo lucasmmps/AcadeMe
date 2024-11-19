@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Importando o Router
 import './index.css';
 import App from './pages/App';
 import Home from './pages/Home';
@@ -13,7 +14,14 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Login />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} /> {/* Rota para Home */}
+        <Route path="/login" element={<Login />} /> {/* Rota para Login */}        
+        <Route path="/signup" element={<SignUp />} /> {/* Rota para SignUp */}
+        {/* Adicione mais rotas conforme necessário */}
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 

@@ -6,9 +6,26 @@ import { TextBar } from '../components/TextBar';
 import logo from '../assets/colored-logo.svg';
 import moldure from '../assets/squares-moldure.svg'
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
+const Login: React.FC = () => {
+    const ref = useRef<HTMLButtonElement | null>(null);
+    const navigate = useNavigate();
+  
+    const handleGoToProfile = () => {
+      navigate('/Profile');
+    };
 
-function Login() {
-    const ref = useRef<null | HTMLButtonElement>(null);
+
+
+    //NÃO TEM BOTÃO ENTÃO VOU USAR O IMPORT DE LINK
+    //const handleGoToSignUp = () => {
+    //  navigate('/SignUp'); 
+   // };
+
+
+//function Login() {
+  //  const ref = useRef<null | HTMLButtonElement>(null);
 
     return (
         <div className="Login flex h-screen w-screen flex-col items-center justify-start">
@@ -22,14 +39,18 @@ function Login() {
                     <TextBar label="Senha" type='password' placeholder='Digite sua senha' />
                     <a href="" className='text-[#006ACB]'>Esqueci minha senha</a>
 
-                    <Button ref={ref} size="default" shape="pill" className="p-4 mt-4 mb-4 w-full justify-center" >Entrar</Button>
+                    <Button ref={ref} size="default" shape="pill" className="p-4 mt-4 mb-4 w-full justify-center" 
+                    onClick={handleGoToProfile} // Redirecionamento para o perfil
+                    >Entrar</Button>
                     
                     <div className="flex items-center gap-2 w-full">
                         <hr className="flex-1 border-t border-[#006ACB]" />
                          <span className="text-[#006ACB]">ou</span>
                         <hr className="flex-1 border-t border-[#006ACB]" />
                     </div>
-                    <a href="" className='text-[#006ACB]'>Cadastre-se</a>
+
+                    {/* Usando o Link para redirecionar para a página de registro */}
+                    <Link to="/signup" className='text-[#006ACB]'>Cadastre-se</Link>
                     
                 </form>
             </div>
