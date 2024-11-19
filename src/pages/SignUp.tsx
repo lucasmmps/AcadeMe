@@ -5,16 +5,21 @@ import { Button } from '../components/Button';
 import { TextBar } from '../components/TextBar';
 import logo from '../assets/white-logo.svg';
 import moldure from '../assets/squares-moldure.svg'
+import { Link } from 'react-router-dom'; 
 import './SignUp.css';
+const SignUp: React.FC = () => {
+    const ref = useRef<HTMLButtonElement | null>(null);
+//function SignUp() 
 
-function SignUp() {
-    const ref = useRef<null | HTMLButtonElement>(null);
+    //const ref = useRef<null | HTMLButtonElement>(null);
 
     return (
         <div className="SignUp flex h-screen flex-col gap-0 2xl:flex-row 2xl:gap-96">
             {/** Left Banner **/}
             <div className="banner hidden 2xl:flex bg-gradient-to-br from-[#006ACB] to-[#003465] p-16 flex-col justify-center items-center w-[472px] h-screen">
-                <img src={logo} alt="logo" className="banner-logo mb-8" />
+        
+                <Link to="/" className='text-[#006ACB]'><img src={logo} alt="logo" className="banner-logo mb-8" /></Link>
+    
                 <p className="banner-text text-[#F0F2F5] text-[26px] leading-relaxed text-center">
                     Você está a um passo da sua revolução acadêmica
                 </p>
@@ -51,7 +56,7 @@ function SignUp() {
             <img 
                 src={moldure} 
                 alt="Moldura" 
-                className="hidden 2xl:flex absolute bottom-0 right-0 w-[562px] h-[562px] z-0 pointer-events-none" 
+                className="hidden 2xl:flex absolute bottom-0 right-0 w-[562px] h-auto z-0 pointer-events-none" 
             />
         </div>
     );

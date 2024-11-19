@@ -30,8 +30,8 @@ const Login: React.FC = () => {
     return (
         <div className="Login flex h-screen w-screen flex-col items-center justify-start">
             {/** Logo **/}
-            <img src={logo} alt="logo" className="logo mb-8 mt-16" />
-
+            
+            <Link to="/" className='text-[#006ACB]'><img src={logo} alt="logo" className="logo mb-8 mt-16" /></Link>
             {/** Form **/}
             <div className="Login-form">
                 <form action="" className="w-96 p-4 flex flex-col items-center justify-center gap-4">
@@ -59,7 +59,7 @@ const Login: React.FC = () => {
             <img 
                 src={moldure} 
                 alt="Moldura" 
-                className="hidden 2xl:flex absolute bottom-20 right-0 w-[562px] h-[562px] z-0 pointer-events-none" 
+                className="hidden 2xl:flex absolute bottom-20 right-0 w-[562px] h-auto z-0 pointer-events-none" 
             />
             <div className='footer absolute bottom-0 h-20 w-screen bg-gradient-to-r from-[#006ACB] to-[#003465] z-0 pointer-events-none' />
         </div>
