@@ -1,8 +1,10 @@
 import React from 'react';
+import '../index.css'
+import '../index'
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="flex justify-between items-center p-4 bg-gray-800 text-white">
+    <nav className="flex justify-between items-center p-4 bg-darkBlue text-white">
       <div className="text-xl">AcadeMe</div>
       <input 
         type="text" 
