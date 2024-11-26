@@ -4,6 +4,8 @@ import React from 'react';
 import './Profile.css';
 import Navbar from '../components/Navbar'; // Exemplo de caminho, ajuste conforme necessário
 import ProjectCard from '../components/ProjectCard'; // Exemplo de caminho, ajuste conforme necessário
+import { TextArea } from '../components/TextArea'; // Importando o componente TextArea
+import UserIcon from '../assets/UserIcon.svg';
 
 const Profile: React.FC = () => {
   return (
@@ -13,32 +15,19 @@ const Profile: React.FC = () => {
 
       <div className="profiles-layout">
         {/* Sidebar do perfil */}
-        <aside className="profile-sidebar">
+        <aside className="profile-sidebar flex flex-col justify-between justify-content: space-between">
           <div className="profile-header">
             <img 
-              src="profile-placeholder.png" 
+              src={UserIcon}
               alt="Foto de perfil" 
-              className="profile-image" 
+              className="profile-image border-2 border-softWhite p-2"
             />
-            <h1 className="profile-name">Mikhael Canarinho Nóbrega</h1>
-            <p className="profile-bio">"Só sei que nada sei e tenho muito a aprender"</p>
-            <hr />
-            <p className="profile-course">
-              <strong>Curso:</strong> Análise e Desenvolvimento de Sistemas (Noturno)
-            </p>
-            <hr />
-            <div className="profile-interests">
-              <h2>Áreas de Interesse</h2>
-              <p>UI/UX Design, Linguagem JAVA</p>
-            </div>
-            <hr />
-            <div className="profile-achievements">
-              <h2>Destaques</h2>
-              <div className="achievements-list">
-                <img src="medal-gold.svg" alt="Medalha Ouro" />
-                <img src="medal-silver.svg" alt="Medalha Prata" />
-                <img src="medal-bronze.svg" alt="Medalha Bronze" />
-              </div>
+            <h1 className="profile-name font-extrabold">Mikhael Canarinho Nóbrega</h1>
+            <TextArea background='transparent' textColor='white' borderColor='white' placeholder='Descrição do perfil...' className='profile-description'/>
+            <TextArea background='transparent' textColor='white' borderColor='white' placeholder='Curso...' className='course'/>
+            <div className="interest-area">
+              <h2 className='font-extrabold'>Áreas de Interesse</h2>
+              <TextArea background='transparent' textColor='white' borderColor='white' placeholder='Áreas de interesse...' className='interest-area'/>
             </div>
           </div>
         </aside>
