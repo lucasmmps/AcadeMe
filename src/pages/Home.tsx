@@ -166,10 +166,10 @@ const Home: React.FC = () => {
 <div className='footer-container flex items-start mt-40 gap-8'>
     <img src={coloredLogo} alt="Logo"/>
     <ul className='flex flex-col gap-2 text-[#006ACB] mb-10'>
-        <li className='flex items-center gap-4'><img src={githubLogo} alt="GitLogo" className='h-8 w-8'/><span>github.com/caique18</span></li>
-        <li className='flex items-center gap-4'><img src={githubLogo} alt="GitLogo" className='h-8 w-8'/><span>github.com/lucasmmps</span></li>
-        <li className='flex items-center gap-4'><img src={githubLogo} alt="GitLogo" className='h-8 w-8'/><span>github.com/MikhaelNbg12</span></li>
-        <li className='flex items-center gap-4'><img src={githubLogo} alt="GitLogo" className='h-8 w-8'/><span>github.com/v-gui</span></li>
+        <li className='flex items-center gap-4 font-semibold'><img src={githubLogo} alt="GitLogo" className='h-8 w-8'/><span>github.com/caique18</span></li>
+        <li className='flex items-center gap-4 font-semibold'><img src={githubLogo} alt="GitLogo" className='h-8 w-8'/><span>github.com/lucasmmps</span></li>
+        <li className='flex items-center gap-4 font-semibold'><img src={githubLogo} alt="GitLogo" className='h-8 w-8'/><span>github.com/MikhaelNbg12</span></li>
+        <li className='flex items-center gap-4 font-semibold'><img src={githubLogo} alt="GitLogo" className='h-8 w-8'/><span>github.com/v-gui</span></li>
     </ul>
     {/* Nova seção para a imagem moldure */}
     {/*<div className="image-container flex justify-end ml-auto" style={{ marginTop: '-850px',  marginRight: '-80px'}}>
