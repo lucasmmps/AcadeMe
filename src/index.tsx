@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
+import Upload from './pages/Upload';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -21,6 +22,8 @@ root.render(
         <Route path="/login" element={<Login />} /> {/* Rota para Login */}        
         <Route path="/signup" element={<SignUp />} /> {/* Rota para SignUp */}
         <Route path="/profile" element={<Profile />} /> {/* Rota para Profile */}
+        <Route path="/upload" element={<Upload />} /> {/* Rota para Profile */}
+        
         {/* Adicione mais rotas conforme necessário */}
       </Routes>
     </Router>
