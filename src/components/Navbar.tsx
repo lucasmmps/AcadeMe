@@ -1,19 +1,25 @@
 import React from 'react';
 import '../index.css'
 import '../index'
+import { TextBar } from './TextBar';
+import { Button } from './Button';
 
 const Navbar: React.FC = () => {
   return (
     <nav className="flex justify-between items-center p-4 bg-darkBlue text-white">
       <div className="text-xl">AcadeMe</div>
-      <input 
+      
+      <TextBar placeholder='Procurar Perfil...' iconRight='search' />
+
+      {/*<input 
         type="text" 
         className="p-2 rounded border-none" 
         placeholder="Procurar perfil..." 
-      />
+      />*/}
+
       <div>
-        <button className="ml-2 px-4 py-2 bg-blue-500 rounded text-black">Cadastro</button>
-        <button className="ml-2 px-4 py-2 bg-blue-500 rounded text-black">Login</button>
+        <Button shape='pill' buttonStyle='light' className="ml-2 px-4 py-2 bg-lightBlue text-softWhite">Cadastro</Button>
+        <Button shape='pill' buttonStyle='light' className="ml-2 px-4 py-2 bg-lightBlue rounded text-softWhite">Login</Button>
       </div>
     </nav>
   );
