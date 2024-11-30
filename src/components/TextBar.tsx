@@ -117,7 +117,7 @@ const TextBar = forwardRef<HTMLInputElement, TextBarProps>(
           )}
         >
           {!shouldHideIcons && iconLeft && (
-            <div className="mr-2 ml-2">
+            <div className="mr-2 ml-2 bg-white p-3">
               {iconMap[iconLeft]({ color: iconColor, size: '1.25em' })} {/* Atribuindo a cor e o tamanho */}
             </div>
           )}
@@ -131,7 +131,7 @@ const TextBar = forwardRef<HTMLInputElement, TextBarProps>(
             {...props}
           />
           {!shouldHideIcons && iconRight && (
-            <div className="mr-8 ml-2">
+            <div className="mr-8 ml-2 bg-white p-3">
               {iconMap[iconRight]({ color: iconColor, size: '1.25em' })} {/* Atribuindo a cor e o tamanho */}
             </div>
           )}

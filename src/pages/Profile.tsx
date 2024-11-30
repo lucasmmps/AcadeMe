@@ -1,8 +1,12 @@
 import React, { useRef } from 'react';
 import './Profile.css';
-import Navbar from '../components/Navbar'; // Ajuste conforme o caminho real
-import ProjectCard from '../components/ProjectCard'; // Ajuste conforme o caminho real
+import Navbar from '../components/Navbar'; // Exemplo de caminho, ajuste conforme necessário
+import ProjectCard from '../components/ProjectCard'; // Exemplo de caminho, ajuste conforme necessário
+import LogoVambora from '../assets/logoVamboraFatec.svg';
+import LogoBlockchain from '../assets/logoBlockchain.svg';
+import LogoRedeNeural from '../assets/logoRedeneural.svg';
 import { useNavigate } from 'react-router-dom';
+
 
 const Profile: React.FC = () => {
     const ref = useRef<HTMLButtonElement | null>(null);
