@@ -1,13 +1,12 @@
-// Login Page
-
 import { useRef } from 'react';
 import { Button } from '../components/Button';
 import { TextBar } from '../components/TextBar';
 import logo from '../assets/colored-logo.svg';
-import moldure from '../assets/squares-moldure.svg'
+import moldure from '../assets/squares-moldure.svg';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'; 
+
 const Login: React.FC = () => {
     const ref = useRef<HTMLButtonElement | null>(null);
     const navigate = useNavigate();
@@ -16,22 +15,12 @@ const Login: React.FC = () => {
       navigate('/Profile');
     };
 
-
-
-    //NÃO TEM BOTÃO ENTÃO VOU USAR O IMPORT DE LINK
-    //const handleGoToSignUp = () => {
-    //  navigate('/SignUp'); 
-   // };
-
-
-//function Login() {
-  //  const ref = useRef<null | HTMLButtonElement>(null);
-
     return (
         <div className="Login flex h-screen w-screen flex-col items-center justify-start">
             {/** Logo **/}
-            
-            <Link to="/" className='text-[#006ACB]'><img src={logo} alt="logo" className="logo mb-8 mt-16" /></Link>
+            <Link to="/" className='text-[#006ACB]'>
+                <img src={logo} alt="logo" className="logo mb-8 mt-16" style={{ width: '150px', height: 'auto' }} />
+            </Link>
             {/** Form **/}
             <div className="Login-form">
                 <form action="" className="w-96 p-4 flex flex-col items-center justify-center gap-4">

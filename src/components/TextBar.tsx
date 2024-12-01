@@ -11,6 +11,8 @@ import {
   FaPlus as add,
 } from 'react-icons/fa'; // Importando os ícones com apelidos
 
+
+
 // Mapeando os apelidos dos ícones
 const iconMap = {
   arrowLeft,
@@ -52,6 +54,8 @@ const inputVariants = cva(
     },
   }
 );
+
+
 
 // Definindo as variantes de estilo para o label usando cva
 const labelVariants = cva(
