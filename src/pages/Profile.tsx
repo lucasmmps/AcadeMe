@@ -62,20 +62,13 @@ const Profile: React.FC = () => {
                             placeholder="Pesquisar projeto..."
                             className="search-input"
                         />
-                        <div className="filters-group">
-                            <select className="filter-select">
-                                <option>Selecionar Coleção</option>
-                            </select>
-                            <input
-                                type="text"
-                                placeholder="Filtrar por tags..."
-                                className="filter-tags"
-                            />
+                        <div className="filters-group" >
+                           
                             <button 
                                 className="btn btn-add"
                                 onClick={handleGoToUpload} // Redirecionamento para o upload
                             >
-                                +
+                               Adicionar Projeto +
                             </button>
                         </div>
                     </div>
@@ -87,18 +80,21 @@ const Profile: React.FC = () => {
                             description="Este trabalho apresenta a tecnologia blockchain, que organiza dados em blocos ligados de forma cronológica..."
                             tags={["Blockchain", "Criptografia Assimétrica", "Segurança da Informação"]}
                             date="03/12/2024"
+                            imageUrl={LogoBlockchain}
                         />
                         <ProjectCard
                             title="Vambora Fatec"
                             description="Projeto de aplicativo mobile para agendamento de caronas entre estudantes da Fatec."
                             tags={["Mobile", "Mobilidade Urbana", "Engenharia de Software"]}
                             date="15/10/2024"
+                            imageUrl={LogoVambora}
                         />
                         <ProjectCard
                             title="Rede Neural para Reconhecimento de Caracteres com Backpropagation"
                             description="Desenvolvimento de uma rede neural simples na linguagem Python para reconhecimento de padrões..."
                             tags={["Inteligência Artificial", "Backpropagation"]}
                             date="23/09/2024"
+                            imageUrl={LogoRedeNeural}
                         />
                     </div>
                 </main>

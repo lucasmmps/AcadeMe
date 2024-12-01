@@ -3,40 +3,23 @@ import './Upload.css';
 import bioCaique from '../assets/Imagem bio Caique.svg';
 import bioGui from '../assets/Imagem bio_ fundoGuilherme.svg';
 import studentsMoldure from '../assets/happy-students.svg';
-import logo from '../assets/colored-logo.svg';
+import logo from '../assets/white-logo.svg';
+import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar'; // Importe o componente Navbar
+
 const handleAddFile = () => {
-    // Lógica para adicionar um arquivo
     alert("Adicionar arquivo");
 };
 
 const handleEditReferences = () => {
-    // Lógica para editar referências
     alert("Editar referências");
 };
-
-
 
 const Upload: React.FC = () => {
   return (
     <div className="upload-container">
-      {/* Header */}
-      <header className="upload-header">
-        <div className="header-left">
-            <img src={logo} alt="Logo AcadeMe" className="logo" />
-             <input
-            type="text"
-            className="search-bar"
-            placeholder="Procurar perfil..."
-            />
-        </div>
-        <div className="header-right">
-            <img src={bioCaique}           
-            alt="Foto de Perfil"
-            className="profile-icon"
-            />
-        </div>
-    </header>
-
+      {/* Substitua a barra de cabeçalho pela Navbar */}
+      <Navbar /> 
       {/* Main Content */}
       <main className="upload-main">
         {/* Project Details */}
