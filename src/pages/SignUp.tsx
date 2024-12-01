@@ -1,25 +1,25 @@
-// Sign Up Page
-
 import { useRef } from 'react';
 import { Button } from '../components/Button';
 import { TextBar } from '../components/TextBar';
 import logo from '../assets/white-logo.svg';
-import moldure from '../assets/squares-moldure.svg'
-import { Link } from 'react-router-dom'; 
+import moldure from '../assets/squares-moldure.svg';
+import { Link, useNavigate } from 'react-router-dom'; // Importando useNavigate
 import './SignUp.css';
+import Profile from './Profile';
+
 const SignUp: React.FC = () => {
     const ref = useRef<HTMLButtonElement | null>(null);
-//function SignUp() 
+    const navigate = useNavigate(); // Criando a instância de navigate
 
-    //const ref = useRef<null | HTMLButtonElement>(null);
+    const handleProceed = () => {
+        navigate('/profile'); // Redireciona para a página Profile
+    };
 
     return (
         <div className="SignUp flex h-screen flex-col gap-0 2xl:flex-row 2xl:gap-96">
             {/** Left Banner **/}
             <div className="banner hidden 2xl:flex bg-gradient-to-br from-[#006ACB] to-[#003465] p-16 flex-col justify-center items-center w-[472px] h-screen">
-        
                 <Link to="/" className='text-[#006ACB]'><img src={logo} alt="logo" className="banner-logo mb-8" /></Link>
-    
                 <p className="banner-text text-[#F0F2F5] text-[26px] leading-relaxed text-center">
                     Você está a um passo da sua revolução acadêmica
                 </p>
@@ -48,7 +48,7 @@ const SignUp: React.FC = () => {
                         </div>
                         <TextBar label="Confirme sua senha" type="password" placeholder="Confirme sua senha" />
                     </div>
-                    <Button ref={ref} size="default" shape="pill" className="p-4 mt-12" > Prosseguir </Button>
+                    <Button onClick={handleProceed} ref={ref} size="default" shape="pill" className="p-4 mt-12"> Prosseguir </Button>
                 </form>
             </div>
 
@@ -61,6 +61,5 @@ const SignUp: React.FC = () => {
         </div>
     );
 }
-
 
 export default SignUp;
