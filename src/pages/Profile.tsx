@@ -23,23 +23,32 @@ const Profile: React.FC = () => {
             <Navbar />
 
             <div className="profiles-layout">
-        {/* Sidebar do perfil */}
-        <aside className="profile-sidebar flex flex-col justify-between justify-content: space-between">
-          <div className="profile-header">
-            <img 
-              src={UserIcon}
-              alt="Foto de perfil" 
-              className="profile-image border-2 border-softWhite p-2"
-            />
-            <h1 className="profile-name font-extrabold">Mikhael Canarinho Nóbrega</h1>
-            <TextArea background='transparent' textColor='white' borderColor='white' placeholder='Descrição do perfil...' className='profile-description'/>
-            <TextArea background='transparent' textColor='white' borderColor='white' placeholder='Curso...' className='course'/>
-            <div className="interest-area">
-              <h2 className='font-extrabold'>Áreas de Interesse</h2>
-              <TextArea background='transparent' textColor='white' borderColor='white' placeholder='Áreas de interesse...' className='interest-area'/>
-            </div>
-          </div>
-        </aside>
+   {/* Sidebar do perfil */}
+<aside className="profile-sidebar flex flex-col justify-between justify-content: space-between">
+  <div className="profile-header">
+    <img 
+      src={UserIcon}
+      alt="Foto de perfil" 
+      className="profile-image border-2 border-softWhite p-2 min-h-80 min-w-80"
+    />
+    <h1 className="profile-name font-extrabold mt-5">Mikhael Canarinho Nóbrega</h1>
+    
+    {/* Barra de separação */}
+    <div className="separator" style={{ borderBottom: '1px solid white', margin: '10px 0' }} />
+
+    <TextArea background='transparent' textColor='white' borderColor='dark_blue' placeholder='Descrição do perfil...' className='profile-description'/>
+    
+    {/* Outra barra de separação, se necessário */}
+    <div className="separator" style={{ borderBottom: '1px solid white', margin: '10px 0' }} />
+
+    <TextArea background='transparent' textColor='white' borderColor='dark_blue' placeholder='Curso...' className='course'/>
+    
+    <div className="interest-area">
+      <h2 className='font-extrabold'>Áreas de Interesse</h2>
+      <TextArea background='transparent' textColor='white' borderColor='dark_blue' placeholder='Áreas de interesse...' className='interest-area'/>
+    </div>
+  </div>
+</aside>
 
                 {/* Área central - Projetos */}
                 <main className="projects-section">
