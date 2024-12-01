@@ -74,7 +74,7 @@ const Home: React.FC = () => {
                         <h1 className='search-title text-[#006ACB] text-[40px] mb-[44px]'>O que é o AcadeMe?</h1>
                         <p className='about-search text-[#006ACB] text-[26px] mb-[44px]'>
                         Com o AcadeMe o aluno é capaz de destacar toda a
-                        sua trajetória acadêmica trazendo vizibilidade para
+                        sua trajetória acadêmica trazendo visibilidade para
                         todas atividades feitas na faculdade e credibilidade
                         para seus conhecimentos.
                         </p>
