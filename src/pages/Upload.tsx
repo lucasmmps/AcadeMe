@@ -1,9 +1,7 @@
 import React from 'react';
 import './Upload.css';
-import bioCaique from '../assets/Imagem bio Caique.svg';
-import bioGui from '../assets/Imagem bio_ fundoGuilherme.svg';
-import studentsMoldure from '../assets/happy-students.svg';
-import logo from '../assets/white-logo.svg';
+import logoQueima from '../assets/QueimaFitLogo.svg';
+import landingpage from '../assets/QueimaFitLP.png';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar'; // Importe o componente Navbar
 
@@ -23,8 +21,8 @@ const Upload: React.FC = () => {
       {/* Main Content */}
       <main className="upload-main">
         {/* Project Details */}
-        <section className="project-details">
-    <img src={bioCaique} alt="QueimaFIT Logo" className="project-logo" />
+        <section className="project-details ">
+    <img src={logoQueima} alt="QueimaFIT Logo" className="project-logo"/>
     <div className="project-info">
         <h1>QueimaFIT</h1>
         <p className="project-meta">
@@ -54,7 +52,7 @@ const Upload: React.FC = () => {
     <div className="posters-grid">
         <div className="poster-card">
             <img
-                src={bioCaique}
+                src={landingpage}
                 alt="Landing Page Poster"
                 className="poster-image"
             />
@@ -62,7 +60,7 @@ const Upload: React.FC = () => {
         </div>
         <div className="poster-card">
             <img
-                src={bioCaique}
+                src={logoQueima}
                 alt="QueimaFIT Logo"
                 className="poster-image"
             />
@@ -81,7 +79,7 @@ const Upload: React.FC = () => {
         
         {/* Contêiner para os botões */}
         <div className="button-container">
-            <button className="add-file-button" onClick={handleAddFile}>Adicionar Arquivo</button>
+            <button className="add-file-button mb-1" onClick={handleAddFile}>Adicionar Arquivo</button>
         </div>
         
         <table className="files-table">
@@ -135,7 +133,9 @@ const Upload: React.FC = () => {
 </section>
 
         {/* Save Button */}
-        <button className="save-button">Salvar alterações</button>
+        <Link to="/Profile">
+        <button className="save-button">Salvar alterações </button> 
+        </Link>
       </main>
     </div>
   );

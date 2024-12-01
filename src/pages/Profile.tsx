@@ -24,28 +24,29 @@ const Profile: React.FC = () => {
 
             <div className="profiles-layout">
    {/* Sidebar do perfil */}
-<aside className="profile-sidebar flex flex-col justify-between justify-content: space-between">
+<aside className="profile-sidebar flex flex-col justify-between justify-content: space-between bg-gradient-to-r from-[#006ACB] to-[#01519c]">
   <div className="profile-header">
     <img 
       src={UserIcon}
       alt="Foto de perfil" 
-      className="profile-image border-2 border-softWhite p-2 min-h-80 min-w-80"
+      className="profile-image border-2 border-softWhite p-2 min-h-80 min-w-80 mt-6"
     />
-    <h1 className="profile-name font-extrabold mt-5">Mikhael Canarinho Nóbrega</h1>
+    <h1 className="profile-name font-extrabold mt-8">Mikhael Canarinho Nóbrega</h1>
     
     {/* Barra de separação */}
     <div className="separator" style={{ borderBottom: '1px solid white', margin: '10px 0' }} />
 
-    <TextArea background='transparent' textColor='white' borderColor='dark_blue' placeholder='Descrição do perfil...' className='profile-description'/>
+    <TextArea background='transparent' textColor='white'  placeholder='Descrição do perfil...' className='profile-description'/>
     
     {/* Outra barra de separação, se necessário */}
     <div className="separator" style={{ borderBottom: '1px solid white', margin: '10px 0' }} />
 
-    <TextArea background='transparent' textColor='white' borderColor='dark_blue' placeholder='Curso...' className='course'/>
-    
+    <TextArea background='transparent' textColor='white'  placeholder='Curso...' className='course'/>
+    <div className="separator" style={{ borderBottom: '1px solid white', margin: '10px 0' }} />
+
     <div className="interest-area">
-      <h2 className='font-extrabold'>Áreas de Interesse</h2>
-      <TextArea background='transparent' textColor='white' borderColor='dark_blue' placeholder='Áreas de interesse...' className='interest-area'/>
+      <h2 className='font-extrabold mt-8'>Áreas de Interesse</h2>
+      <TextArea background='transparent' textColor='white' placeholder='Áreas de interesse...' className='interest-area'/>
     </div>
   </div>
 </aside>
